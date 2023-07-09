@@ -10,13 +10,47 @@
         <title>height converter</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        <script src="" async defer></script>
+        <div id="heading">
+            <h1>height converter</h1>
+            <form id="choice-input">
+                <input type="radio" id="op-cm" value="cm" name="choice-input">
+                <label for="op-cm">cm</label>
+                <input type="radio" id="op-feet" value="feet" name="choice-input">
+                <label for="op-feet">feet & inches</label>
+                <input type="radio" id="op-compare" value="compare" name="choice-input">
+                <label for="op-compare">compare</label>
+            </form>
+        </div>
+        <div id="cm_div" style="display:none;">
+            <p>convert height from cm to feet & inches</p>
+            <form>
+                <label for="cm-in">height in cm:</label>
+                <input type="text" id="cm-in" name="cm">
+                <button value="convert" name="convert" onclick="cm2feet()" type="button">convert</button>
+                <p id="cm-out">answer</p>
+            </form>
+        </div>
+        <div id="feet_div" style="display:none;">
+            <p>convert height from feet & inches to cm</p>
+            <form>
+                <label for="feet-in">height in feet:</label>
+                <input type="text" id="feet-in" name="feet">
+                <label for="inch-in">inches:</label>
+                <input type="text" id="inch-in" name="inch">
+                <button value="convert" name="convert" onclick="feet2cm()" type="button">convert</button>
+                <p id="feet-out">answer</p>
+            </form>
+        </div>
+        <div id="compare_div" style="display:none;">
+            <p>compare</p>
+            <p>coming soon! lol</p>
+        </div>
+        <script src="script.js" async defer></script>
     </body>
 </html>
